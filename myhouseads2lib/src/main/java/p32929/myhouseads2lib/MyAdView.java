@@ -15,7 +15,6 @@ public class MyAdView extends RelativeLayout {
 
     Context context;
     ImageView imageView;
-    TextView textViewName, textViewDescription;
     MyAd myAd;
 
     public MyAdView(final Context context, final MyAd myAd) {
@@ -25,8 +24,7 @@ public class MyAdView extends RelativeLayout {
 
         inflate(context, R.layout.rv_layout, this);
         imageView = findViewById(R.id.app_image);
-        textViewName = findViewById(R.id.app_name);
-        textViewDescription = findViewById(R.id.app_desc);
+
 
         this.setBackgroundColor(Color.parseColor("#F5F5F5"));
 
@@ -39,11 +37,11 @@ public class MyAdView extends RelativeLayout {
         });
 
         setValues();
+
     }
 
     public void setValues() {
         Picasso.get().load(myAd.getAppIcon()).placeholder(R.drawable.ic_android_grey600_48dp).into(imageView);
-        textViewName.setText("" + myAd.getAppName());
-        textViewDescription.setText("" + myAd.getAppDescription());
+    
     }
 }

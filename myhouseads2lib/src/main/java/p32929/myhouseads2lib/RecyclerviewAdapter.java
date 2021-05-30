@@ -37,8 +37,6 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     public void onBindViewHolder(@NonNull RecyclerviewAdapter.ViewHolder holder, int position) {
         final MyAd ma = myAds.get(position);
 
-        holder.textViewName.setText("" + ma.getAppName());
-        holder.textViewDescription.setText("" + ma.getAppDescription());
         holder.textViewName.setSelected(true);
 
         Picasso.get().load(ma.getAppIcon()).placeholder(R.drawable.ic_android_grey600_48dp).into(holder.imageView);
@@ -67,8 +65,6 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
             super(itemView);
 
             imageView = itemView.findViewById(R.id.app_image);
-            textViewName = itemView.findViewById(R.id.app_name);
-            textViewDescription = itemView.findViewById(R.id.app_desc);
             relativeLayout = itemView.findViewById(R.id.rv_rl);
         }
     }

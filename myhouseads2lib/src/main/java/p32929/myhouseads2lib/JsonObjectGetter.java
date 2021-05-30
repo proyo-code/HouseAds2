@@ -67,8 +67,6 @@ public class JsonObjectGetter extends AsyncTask<Void, Void, MyAd[]> {
                 JSONObject object = jsonArray.getJSONObject(i);
                 myAds[i] = new MyAd(
                         object.getString("appIcon"),
-                        object.getString("appName"),
-                        object.getString("appDescription"),
                         object.getString("url")
                 );
             }

@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         linearLayout = findViewById(R.id.adsLl);
 
         houseAds = new HouseAds(this,
-                "https://raw.githubusercontent.com/p32929/SomeHowTosAndTexts/master/HouseAdsJson/house_ads2.json",
+                "https://raw.githubusercontent.com/proyo-code/SomeHowTosAndTexts/master/HouseAdsJson/houseofads2.json",
                 linearLayout
         );
         houseAds.setFeedbackEmail("p32929@gmail.com");
-        houseAds.autoChangeBannerAds(60);
+        houseAds.autoChangeBannerAds(10);
         houseAds.setMenInBlack(true);
         houseAds.shuffleBeforeShowingDialog();
         houseAds.setListener(new InterListener() {
